@@ -9,6 +9,7 @@
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
+    "dotenv": "^8.2.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.2.0",
     "webpack": "^4.42.1",
@@ -20,6 +21,7 @@
     "start": "webpack-dev-server --open --mode development"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
