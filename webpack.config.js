@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const dotenv = require('dotenv');
@@ -9,28 +10,38 @@ module.exports = () => {
     return prev
   }, {}) 
   
-  return {module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
+  return {
+    entry: path.resolve(__dirname, 'src', 'index.tsx'),
+    resolve: {
+      extensions: [".ts", ".tsx", ".js", ".jsx"]
+    },
+    module: {
+      rules: [
+        {
+          test: /\.ts(x)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "ts-loader"
+          }
+        },
+        {
+          enforce: "pre",
+          test: /\.js$/,
+          loader: "source-map-loader"
+        },
+        {
+          test: /\.html$/,
+          use: {
+            loader: "html-loader"
+          }
         }
-      },
-      {
-        test: /\.html$/,
-        use: {
-          loader: "html-loader"
-        }
-      }
-    ]
-  },
-  plugins: [
-    new webpack.DefinePlugin(envKeys),
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
-    })
-  ]}
+      ]
+    },
+    plugins: [
+      new webpack.DefinePlugin(envKeys),
+      new HtmlWebpackPlugin({
+        template: "./src/index.html",
+      })
+    ],
+  }
 };
