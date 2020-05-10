@@ -1,6 +1,6 @@
-import React from "react";
-import Form from "./js/components/Form";
+import React, { FunctionComponent } from 'react';
+import CharacterList from './js/components/CharacterList';
 
-const App = () => <Form/>
+const App: FunctionComponent = () => <CharacterList />;
 
 export default App;

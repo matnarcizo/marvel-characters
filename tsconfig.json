@@ -4,7 +4,11 @@
       "allowSyntheticDefaultImports": true,
       "esModuleInterop": true,
       "lib": [
-        "DOM", "ES2015"
+        "dom",
+        "es2015",
+        "es2016",
+        "es2017",
+        "esnext"
       ],
       "outDir": "./dist/",
       "sourceMap": true,
