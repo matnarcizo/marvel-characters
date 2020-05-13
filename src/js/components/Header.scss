@@ -1,0 +1,20 @@
+@import "../../commons/styles";
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 5px grey;
+  background-color: $marvel_red;
+}
+
+.title {
+  margin: 0;
+  padding: 0 8px 0 8px;
+  font-family: Marvel;
+  color: $marvel_white;
+  font-size: 24px;
+}
