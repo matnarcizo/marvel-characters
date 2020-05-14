@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import marvelLogo from '../../commons/assets/marvel-logo.png';
+import marvelLogo from '../commons/assets/marvel-logo.png';
 import './Header.scss';
 
 const Header: FunctionComponent = () => (

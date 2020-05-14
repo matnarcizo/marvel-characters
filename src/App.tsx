@@ -1,12 +1,12 @@
 import React, { FunctionComponent } from 'react';
-import CharacterList from './js/components/CharacterList';
-import Header from './js/components/Header';
+import Characters from './pages/characters';
+import Header from './components/Header';
 import './App.scss';
 
 const App: FunctionComponent = () => (
   <div className="container">
     <Header />
-    <CharacterList />
+    <Characters />
   </div>
 );
 
